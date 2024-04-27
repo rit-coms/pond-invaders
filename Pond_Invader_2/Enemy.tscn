@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnfqk0dc6ah8t"]
+
+[ext_resource type="Script" path="res://Enemy.gd" id="1_decl3"]
+[ext_resource type="Texture2D" uid="uid://caghb8m8erg5i" path="res://enebird.png" id="2_1wox4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6obm"]
+size = Vector2(75, 34)
+
+[node name="Enemy" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_decl3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_l6obm")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+rotation = -3.14156
+scale = Vector2(0.701611, 0.701611)
+texture = ExtResource("2_1wox4")
